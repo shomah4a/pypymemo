@@ -4,7 +4,7 @@
 
 実行順
 
-- :py:meth:`build_graph_types <pypy.annotation.annrpython.RPythonTyper.build_graph_types` で flow graph に型情報を設定する。
+- :py:meth:`build_graph_types <pypy.annotation.annrpython.RPythonTyper.build_graph_types>` で flow graph に型情報を設定する。
 - :py:meth:`getcallable <pypy.rpython.rtyper.RPythonTyper.getcallable>` で function object を生成する。
 
 
