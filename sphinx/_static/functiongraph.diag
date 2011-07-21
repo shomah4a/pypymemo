@@ -1,0 +1,28 @@
+
+{
+    span_width = 120;
+    
+    Block1 [label="start_block (Block)"];
+    Return [label="return block (Block)"];
+
+    FunctionGraph -> Block1 [label="startblock"];
+    FunctionGraph -> Return [label="returnblock"];
+
+    group {
+        Arg1 [label="arg1 x (Variable or Constant)"];
+        Arg2 [label="arg2 y (Variable or Constant)"];
+
+        color = "#aaaa00";
+    }
+
+    Block1 -> Arg1, Arg2 [label="inputargs"];
+    Block1 -> Return [label="exits"]
+
+    Block1 -> Op1 [label="operators"];
+
+    group {
+        Op1 [label="operation x+y (ScopeOperator)"];
+        color = "#aa0000";
+    }
+    
+}
