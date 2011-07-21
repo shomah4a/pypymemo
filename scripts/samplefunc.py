@@ -45,7 +45,10 @@ print link
 print add_op
 
 
+# Annotator
 an = annrpython.RPythonAnnotator()
+
+# RTyper
 rt = rtyper.RPythonTyper(an)
 
 print rt.getcallable(func)._T
@@ -54,5 +57,5 @@ print rt.getcallable(func)._T
 rettype = an.build_graph_types(func, [rtmodel.SomeInteger(), rtmodel.SomeInteger()])
 
 # flow graph から関数? オブジェクトを取得
-f rt.getcallable(func)
+f = rt.getcallable(func)
 
