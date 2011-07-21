@@ -33,7 +33,7 @@ pypy.objspace.flow.model
   :member: - isstartblock - :py:class:`FunctionGraph` の開始ブロックなら True
            - inputargs - 引数と同じ
            - operations - :py:class:`SpaceOperation` のリスト。初期値は空リスト
-           - exitswitch - :py:class:`Variable` か :py:class:`Constant`(last_exception)
+           - exitswitch - :py:class:`Variable` か :py:class:`Constant` (last_exception)
            - exits - :py:class:`Link` のリスト。 exitswitch を評価した結果と exits のそれぞれの要素の exitcase を比較して一致したらその Link に飛ぶ
 
   プログラムの制御に用いる最小単位?
