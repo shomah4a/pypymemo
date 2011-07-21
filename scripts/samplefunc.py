@@ -13,9 +13,6 @@ from pypy.annotation import model as rtmodel
 x = model.Variable('x')
 y = model.Variable('y')
 
-x.concretetype = rtmodel.SomeInteger()
-y.concretetype = rtmodel.SomeInteger()
-
 # 演算結果格納
 tmpvar = model.Variable('tmp')
 
@@ -54,8 +51,9 @@ rt = rtyper.RPythonTyper(an)
 print rt.getcallable(func)._T
 
 # flow graph に型情報設定
-rettype = an.build_graph_types(func, [rtmodel.SomeInteger(), rtmodel.SomeInteger()])
+r = an.build_graph_types(func, [rtmodel.SomeInteger(), rtmodel.SomeInteger()])
 
 # flow graph から関数? オブジェクトを取得
-f = rt.getcallable(func)
+ll_f = rt.getcallable(func)
+
 

@@ -4,6 +4,8 @@
 
 translatorshell.py で色々内部を見てみた結果のメモ。
 
+.. blockdiag:: /_static/functiongraph.diag
+
 pypy.objspace.flow.model
 ========================
 
@@ -60,6 +62,7 @@ pypy.objspace.flow.model
 .. py:class:: Variable(name=None)
 
   :param str name: 変数名
+  :member: - concretetype (:py:class:`SomeObject <pypy.annotation.model.SomeObject>`) - 型情報 推論の結果設定されたりする
 
   変数
 
@@ -68,6 +71,7 @@ pypy.objspace.flow.model
 
   :param value: 値
   :param concretetype: 型情報
+  :type concretetype: :py:class:`SomeObject <pypy.annotation.model.SomeObject>`
 
   定数
 

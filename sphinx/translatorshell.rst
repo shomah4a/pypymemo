@@ -14,9 +14,6 @@ FunctionGraph を作るところ
 - :py:meth:`PyCode._from_code <pypy.interpreter.pycode.PyCode._from_code>` でバイトコードからつくっているらしい
 
 
-.. blockdiag:: /_static/functiongraph.diag
-
-
 RTyper なところ
 ===============
 

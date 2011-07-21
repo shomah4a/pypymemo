@@ -16,7 +16,6 @@
     }
 
     Block1 -> Arg1, Arg2 [label="inputargs"];
-    Block1 -> Return [label="exits"]
 
     Block1 -> Op1 [label="operators"];
 
@@ -24,5 +23,11 @@
         Op1 [label="operation x+y (ScopeOperator)"];
         color = "#aa0000";
     }
+
+    Link1 [label="link to return block (Link)"];
+
+    Block1 -> Link1 [label="exits"];
+
+    Link1 -> Return [label="target"];
     
 }
